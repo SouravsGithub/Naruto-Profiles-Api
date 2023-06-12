@@ -33,7 +33,7 @@ app.get("/api/:heroName", (req, res) => {
   if (heroes[herosName]) {
     res.json(heroes[herosName]);
   } else {
-    res.send("No data available for this character now!");
+    res.json({ message: "No data available for this character right now!" });
   }
 });
 app.listen(process.env.PORT || PORT, () => {
