@@ -2,23 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const PORT = 8000;
-const heroes = {
-  itachi: {
-    name: "Itachi Uchiha",
-    bestMove: "Infinite Tsukuyomi",
-    isDead: "Yes",
-  },
-  naruto: {
-    name: "Naruto Uzumaki",
-    bestMove: "Sexy Jutsu",
-    isDead: "No",
-  },
-  minato: {
-    name: "Minato Namikaze",
-    bestMove: "Teleportation Jutsu",
-    isDead: "Yes",
-  },
-};
+const { heroes } = require("./charactersFile.js");
 app.use(cors());
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
@@ -29,7 +13,7 @@ app.get("/api", (req, res) => {
 });
 
 app.get("/api/:heroName", (req, res) => {
-  const herosName = req.params.heroName;
+  const herosName = req.params.heroName.toLowerCase();
   if (heroes[herosName]) {
     res.json(heroes[herosName]);
   } else {
