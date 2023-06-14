@@ -14,7 +14,7 @@ exports.heroes = {
     bestMove: "Teleportation Jutsu",
     isDead: "Yes",
   },
-  sauske: {
+  sasuke: {
     name: "Sasuke Uchiha",
     bestMove: "Amaterasu",
     isDead: "No",
