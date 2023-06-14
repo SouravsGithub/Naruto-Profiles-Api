@@ -14,4 +14,24 @@ exports.heroes = {
     bestMove: "Teleportation Jutsu",
     isDead: "Yes",
   },
+  sauske: {
+    name: "Sasuke Uchiha",
+    bestMove: "Amaterasu",
+    isDead: "No",
+  },
+  kakashi: {
+    name: "Kakashi Hatake",
+    bestMove: "Chidori",
+    isDead: "No",
+  },
+  obito: {
+    name: "Obito Uchiha",
+    bestMove: "Kamui",
+    isDead: "Yes",
+  },
+  orochimaru: {
+    name: "Lord Orochimaru",
+    bestMove: "Staying Alive",
+    isDead: "No fucking way!!",
+  },
 };
